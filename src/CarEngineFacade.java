@@ -16,6 +16,7 @@ public class CarEngineFacade {
         coolingController.setTemperatureUpperLimit(DEFAULT_COOLING_TEMP);
         coolingController.run();
         catalyticConverter.on();
+        System.out.println("Carro encendido");
     }
 
     public void stopEngine() {
@@ -24,5 +25,6 @@ public class CarEngineFacade {
         coolingController.cool(MAX_ALLOWED_TEMP);
         coolingController.stop();
         airFlowController.off();
+        System.out.println("Carro apagado");
     }
 }
